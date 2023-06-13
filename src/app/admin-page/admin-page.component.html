@@ -1,0 +1,96 @@
+<div class="container text-center">
+  <form [formGroup]="formGroupAdmin">
+    <div class="mb-2">
+      <div class="display-6">
+        Adicione um Anúncio
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="titulo">Modelo do Veiculo</span>
+      <input type="text" id="titulo" formControlName="titulo" class="form-control" aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default">
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="descricao"> Descrição </span>
+      <input type="descricao" id="descricao" formControlName="descricao" class="form-control"
+        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="preco">Valor </span>
+      <input type="preco" id="preco" formControlName="preco" class="form-control" aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline">
+        <input type="radio" id="opcao1" value="Disponivel" formControlName="status">
+        <label for="opcao1">Disponivel</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" id="opcao3" value="Vendido" formControlName="status">
+        <label for="opcao3">Vendido</label>
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="validade">Validade</span>
+      <input type="date" id="validade" formControlName="validade" class="form-control" aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="image">Imagem</span>
+      <input type="src" id="image" formControlName="image" class="form-control" aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default">
+    </div>
+
+    <div class="input-group-text mb-3 justify-content-end">
+      <input class="form-check-input mt-0" type="checkbox" formControlName="isChecked"
+          aria-label="Checkbox for following text input"> <label>Aceitar os <a
+              href="https://www.youtube.com/watch?v=HREU8Qnd-bI" target="_blank">Termos e
+              Condições</a></label>
+    </div>
+
+    <div class="mb-3 mt-3 text-end">
+      <button class="btn btn-success text-light me-2" style="width: 20%;" (click)="save()"> salvar</button>
+      <button class="btn btn-primary text-light" (click)="clean()">Limpar</button>
+
+    </div>
+    <div class="text-center mt-5">
+      <h2> Veículos Cadastrados</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Título</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Validade</th>
+            <th scope="col">Status </th>
+          </tr>
+        </thead>
+
+
+
+        <tbody>
+          <tr *ngFor="let adminPage of AdminPage ">
+            <th scope="row">{{adminPage.id}}</th>
+            <td>{{adminPage.titulo}}</td>
+            <td>{{adminPage.descricao}}</td>
+            <td>{{adminPage.preco}}</td>
+            <td>{{adminPage.validade}}</td>
+            <td *ngIf="adminPage.status">{{adminPage.status}}</td>
+
+
+            <td>
+              <button class="btn btn-light me-1" (click)="edit(adminPage)">Editar</button>
+              <button class="btn btn-secondary" (click)="delete(adminPage)">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
+
+</div>

@@ -1,0 +1,34 @@
+{
+  "Veiculos": [
+    {
+      "id": 1,
+      "titulo": "Santana",
+      "preco": "12.000,05",
+      "descricao": "Gostaria de conhecer meu Santanão 1.8 na estrada? ",
+      "validade": "2023-07-02",
+      "isChecked": true,
+      "image": "https://fotos.jornaldocarro.estadao.com.br/jornal-do-carro/imagens/noticia/AUTOS_E_ACESSORIOS6_red.jpg",
+      "status": "Disponivel"
+    },
+    {
+      "id": 2,
+      "titulo": "Voyage",
+      "preco": "35.000,02",
+      "descricao": "Um carro bem completo e bom",
+      "validade": "2015-05-12",
+      "isChecked": true,
+      "image": "https://cdn.motor1.com/images/mgl/VrAJM/s3/voz-do-dono-proprietario-do-novo-voyage-2010-fala-suas-impressoes-sobre-o-sedan.jpg",
+      "status": "Vendido"
+    },
+    {
+      "id": 3,
+      "titulo": "Astra 2010",
+      "preco": "35.000,01",
+      "descricao": "Muito incrível, um dos carros mais divertidos que pilotei",
+      "validade": "0002-02-01",
+      "isChecked": true,
+      "image": "https://2.bp.blogspot.com/-UbKvpwydVR4/XAxk2l6w7cI/AAAAAAAAPS0/HaEyC9OPtIQXlfG5pibV-ZSzsRZ8dq2mwCLcBGAs/s1600/Chevrolet-Astra-2010%2B%25282%2529.jpg",
+      "status": "Disponivel"
+    }
+  ]
+}

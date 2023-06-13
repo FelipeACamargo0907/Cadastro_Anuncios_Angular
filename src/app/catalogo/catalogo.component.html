@@ -1,0 +1,32 @@
+<div class="container text-center p-5">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let adminPage of AdminPage">
+            <div class="card mb-3" style="width: 18rem;">
+                <img [src]="adminPage.image" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">{{ adminPage.titulo | titlecase }}</h5>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Preço</th>
+                                <td>{{ adminPage.preco }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ano</th>
+                                <td>{{ adminPage.validade }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Condições</th>
+                                <td>{{ adminPage.descricao }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Status</th>
+                                <td *ngIf="adminPage.status">{{ adminPage.status }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
